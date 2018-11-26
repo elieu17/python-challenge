@@ -47,13 +47,14 @@ with open(budgetCSV, "r", newline="") as csvfile:
     max_loss_month = str(months[max_loss_month_index])
 
 
-print("Financial Analysis")
-print("----------------------------")
-print(f"Total Months: {total_months}")
-print(f"Total: ${total}")
-print(f"Average Change: ${numformat_avgdelta}")
-print(f"Greatest Increase in Profits: {max_profit_month} ${max_profit}")
-print(f"Greatest Decrease in Profits: {max_loss_month} ${max_loss}")
+print(f"Financial Analysis\n----------------------------\nTotal Months: {total_months}\nTotal: ${total}\nAverage Change: ${numformat_avgdelta}\nGreatest Increase in Profits: {max_profit_month} ${max_profit}\nGreatest Decrease in Profits: {max_loss_month} ${max_loss}")
 
+def output_txt():
+    return (f"Financial Analysis\n----------------------------\nTotal Months: {total_months}\nTotal: ${total}\nAverage Change: ${numformat_avgdelta}\nGreatest Increase in Profits: {max_profit_month} ${max_profit}\nGreatest Decrease in Profits: {max_loss_month} ${max_loss}")
+
+
+file = open("PyBank_main_Eric Lieu.txt", "w")
+file.write(output_txt())
+file.close()
 
 
